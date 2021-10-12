@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <title>ML API</title>
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href='{{ url_for('static', filename='css/style.css') }}'}">
+    </head>
+    <body>
+        <div class="login">
+            <h1>See whether you survive the Titanic?</h1>
+            <form action="{{ url_for('predict')}}"method="post">
+                <input type="text" name="Age" placeholder="Type your age here" required="required" maxlength="2" />
+                <br>
+                <br>
+                <input type="radio" name="Sex" value="male"><label for="male">Male</label>
+                <input type="radio" name="Sex" value="female">
+                <label for="female">Female</label>
+                <br>
+                <br>
+                <label for="Embarked">Choose your Embarkment:</label>
+                  <select name="Embarked">
+                    <optgroup>
+                      <option value="C">C</option>
+                      <option value="S">S</option>
+                      <option value="Q">Q</option>
+                    </optgroup>
+                  </select>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+            <br>
+            <br>
+            {{ prediction_text }}
+        </div>
+    </body>
+</html>
+<!-- Pclass, Sex, Age, Fare, Embarked, Title[Name], IsAlone[Parch, Sibsp]
