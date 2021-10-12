@@ -7,7 +7,7 @@ import joblib
 import json
 
 app = Flask(__name__)
-'''
+
 logreg = joblib.load('models/model_logreg.pkl')
 knn = joblib.load('models/model_knn.pkl')
 svc = joblib.load('models/model_svm.pkl')
@@ -63,9 +63,5 @@ if __name__ == '__main__':
     gaussian = joblib.load('models/model_gaussiannb.pkl')
     model_columns = joblib.load("model_columns.pkl")
     app.run(debug=True)
-'''
-@app.route('/')
-def home():
-    return render_template('index.html')
-if __name__=='__main__':
-    app.run(debug=True)
+
+
