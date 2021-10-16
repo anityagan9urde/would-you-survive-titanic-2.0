@@ -81,11 +81,10 @@ def predict():
         prediction = random_forest.predict(query)
     if model=='gaussian':
         prediction = gaussian.predict(query)
-    print(prediction)
     if prediction==[0]:
-            output = 'would have died.'
+            output = 'would have died. Bye!'
     elif prediction==[1]:
-            output = 'would have survived.'
+            output = 'would have survived. Phew!! Do not worry. This one is empty.'
     return render_template('index.html', prediction_text='You {}'.format(output))
 
 if __name__ == '__main__':
