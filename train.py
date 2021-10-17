@@ -131,13 +131,6 @@ decision.fit(X_train, Y_train)
 #acc_decision = round(decision.score(X_train, Y_train)*100, 2)
 joblib.dump(decision, 'model_decision.pkl')
 
-#training on Random Forests
-random_forest = RandomForestClassifier(n_estimators=100)
-random_forest.fit(X_train, Y_train)
-#Y_pred = random_forest.predict(X_test)
-#acc_random_forest = round(random_forest.score(X_train, Y_train) * 100, 2)
-joblib.dump(random_forest, 'model_randomforest.pkl')
-
 #training on Gaussian Naive Bayes algorithm
 gaussian = GaussianNB()
 gaussian.fit(X_train, Y_train)
