@@ -9,7 +9,7 @@ import json
 app = Flask(__name__)
 
 logreg = joblib.load('models/model_logreg.pkl')
-knn = joblib.load('models/model_knn.pkl')
+#knn = joblib.load('models/model_knn.pkl')
 svc = joblib.load('models/model_svm.pkl')
 decision = joblib.load('models/model_decision.pkl')
 gaussian = joblib.load('models/model_gaussiannb.pkl')
@@ -86,7 +86,7 @@ def predict():
 
 if __name__ == '__main__':
     logreg = joblib.load('models/model_logreg.pkl')
-    knn = joblib.load('models/model_knn.pkl')
+    #knn = joblib.load('models/model_knn.pkl')
     svc = joblib.load('models/model_svm.pkl')
     decision = joblib.load('models/model_decision.pkl')
     gaussian = joblib.load('models/model_gaussiannb.pkl')
