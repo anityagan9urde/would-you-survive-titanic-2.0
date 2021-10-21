@@ -9,7 +9,7 @@ import json
 app = Flask(__name__)
 
 logreg = joblib.load('models/model_logreg.pkl')
-knn = joblib.load('models/model_knn.pkl')
+#knn = joblib.load('models/model_knn.pkl')
 svc = joblib.load('models/model_svm.pkl')
 decision = joblib.load('models/model_decision.pkl')
 random_forest = joblib.load('models/model_random_forest.pkl')
@@ -71,8 +71,8 @@ def predict():
     print(query)
     if model=='logreg':
         prediction = logreg.predict(query)
-    if model=='knn':
-        prediction = knn.predict(query)
+    #if model=='knn':
+        #prediction = knn.predict(query)
     if model=='svc':
         prediction = svc.predict(query)
     if model=='decision':
@@ -89,7 +89,7 @@ def predict():
 
 if __name__ == '__main__':
     logreg = joblib.load('models/model_logreg.pkl')
-    knn = joblib.load('models/model_knn.pkl')
+    #knn = joblib.load('models/model_knn.pkl')
     svc = joblib.load('models/model_svm.pkl')
     decision = joblib.load('models/model_decision.pkl')
     random_forest = joblib.load('models/model_random_forest.pkl')
