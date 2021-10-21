@@ -11,7 +11,7 @@ app = Flask(__name__)
 logreg = joblib.load('models/model_logreg.pkl')
 #knn = joblib.load('models/model_knn.pkl')
 svc = joblib.load('models/model_svm.pkl')
-decision = joblib.load('models/model_decision.pkl')
+#decision = joblib.load('models/model_decision.pkl')
 random_forest = joblib.load('models/model_random_forest.pkl')
 gaussian = joblib.load('models/model_gaussiannb.pkl')
 
@@ -75,8 +75,8 @@ def predict():
         #prediction = knn.predict(query)
     if model=='svc':
         prediction = svc.predict(query)
-    if model=='decision':
-        prediction = decision.predict(query)
+    #if model=='decision':
+        #prediction = decision.predict(query)
     if model=='random_forest':
         prediction = random_forest.predict(query)
     if model=='gaussian':
@@ -91,7 +91,7 @@ if __name__ == '__main__':
     logreg = joblib.load('models/model_logreg.pkl')
     #knn = joblib.load('models/model_knn.pkl')
     svc = joblib.load('models/model_svm.pkl')
-    decision = joblib.load('models/model_decision.pkl')
+    #decision = joblib.load('models/model_decision.pkl')
     random_forest = joblib.load('models/model_random_forest.pkl')
     gaussian = joblib.load('models/model_gaussiannb.pkl')
     model_columns = joblib.load("model_columns.pkl")
