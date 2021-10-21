@@ -17,13 +17,14 @@
                 </div>
                 <div align="center" style="border: 4px solid #808080; padding: 10px; margin: 10px;">
                     <p>Predictors:</p>
-                      <select name="Model">
+                      <select name="Model" required>
                         <optgroup>
                           <option value="">Models (accuracy)</option>
                           <option value="logreg">Logistic Regression (acc=80.36%)</option>
                           <option value="knn">K Nearest Neighbors (acc=84.74%)</option>
                           <option value="svc">Support Vector Machines (acc=78.23%)</option>
                           <option value="decision">Decision Trees (acc=86.76%)</option>
+                          <option value="random_forest">Random Forests (acc=86.76%)</option>
                           <option value="gaussian">Gaussian Naive Bayes (acc=72.28%)</option>
                         </optgroup>
                       </select>
@@ -31,38 +32,38 @@
                 <div align="center" style="border: 4px solid #808080; padding: 10px; margin: 10px;">
                     <div>
                         <p>Select Passenger Class:</p>
-                        <div><input type="radio" name="Pclass" value="1" id="first"><label for="first" class="radio"><span>First</span></label></div>
-                        <div><input type="radio" name="Pclass" value="2" id="second"><label for="second" class="radio"><span>Second</span></label></div>
-                        <div><input type="radio" name="Pclass" value="3" id="third"><label for="third" class="radio"><span>Third</span></label></div>
+                        <div><input type="radio" name="Pclass" value="1" id="first" required><label for="first" class="radio"><span>First</span></label></div>
+                        <div><input type="radio" name="Pclass" value="2" id="second" required><label for="second" class="radio"><span>Second</span></label></div>
+                        <div><input type="radio" name="Pclass" value="3" id="third" required><label for="third" class="radio"><span>Third</span></label></div>
                     </div>
                 </div>
                 <div align="center" style="border: 4px solid #808080; padding: 10px; margin: 10px;">
                     <p>Select Sex:</p>
-                    <div class="question-answer">
-                        <div><input type="radio" name="Sex" value="0" id="sex1"><label for="sex1" class="radio"><span>Male</span></label></div>
-                        <div><input type="radio" name="Sex" value="1" id="sex2"><label for="sex2" class="radio"><span>Female</span></label></div>
+                    <div>
+                        <div><input type="radio" name="Sex" value="0" id="sex1" required><label for="sex1" class="radio"><span>Male</span></label></div>
+                        <div><input type="radio" name="Sex" value="1" id="sex2" required><label for="sex2" class="radio"><span>Female</span></label></div>
                     </div>
                 </div>
                 <div align="center" style="border: 4px solid #808080; padding: 10px; margin: 10px;">
                     <p>Input your age:</p>
-                    <input type="number" name="Age" placeholder="Type your age here" required="required" maxlength="2" />
+                    <input type="number" name="Age" placeholder="Type your age here" required maxlength="2" />
                 </div>
                 <div align="center" style="border: 4px solid #808080; padding: 10px; margin: 10px;">
                     <p>Input the amount you paid for the ticket in USD:</p>
-                    <input type="number" name="Fare" placeholder="Type your fare here" required="required" maxlength="2" />
+                    <input type="number" name="Fare" placeholder="Type your fare here" required maxlength="2" />
                 </div>
                 <div align="center" style="border: 4px solid #808080; padding: 10px; margin: 10px;">
                     <div>
                         <p>Select from where did you embark:</p>
-                        <div><input type="radio" name="Embarked" value="1" id="C"><label for="C" class="radio"><span>Cherbourg</span></label></div>
-                        <div><input type="radio" name="Embarked" value="0" id="S"><label for="S" class="radio"><span>Southampton</span></label></div>
-                        <div><input type="radio" name="Embarked" value="2" id="Q"><label for="Q" class="radio"><span>Queenstown</span></label></div>
+                        <div><input type="radio" name="Embarked" value="1" id="C" required><label for="C" class="radio"><span>Cherbourg</span></label></div>
+                        <div><input type="radio" name="Embarked" value="0" id="S" required><label for="S" class="radio"><span>Southampton</span></label></div>
+                        <div><input type="radio" name="Embarked" value="2" id="Q" required><label for="Q" class="radio"><span>Queenstown</span></label></div>
                     </div>
                 </div>
                 <div align="center" style="border: 4px solid #808080; padding: 10px; margin: 10px;">
                     <p>Input your name:</p>
                     <div>
-                        <select name="Title">
+                        <select name="Title" required>
                         <optgroup>
                           <option value="">Titles</option>
                           <option value="1">Mr.</option>
@@ -82,14 +83,14 @@
                           <option value="5">Other</option>
                         </optgroup>
                         </select>
-                        <input type="text" placeholder="Type your name here">
+                        <input type="text" placeholder="Type your name here" required>
                     </div>
                 </div>
                 <div align="center" style="border: 4px solid #808080; padding: 10px; margin: 10px;">
                     <div>
                         <p>Are you alone or with a family?</p>
-                        <div><input type="radio" name="IsAlone" value="1" id="1"><label for="1" class="radio"><span>Alone</span></label></div>
-                        <div><input type="radio" name="IsAlone" value="0" id="0"><label for="0" class="radio"><span>Not Alone</span></label></div>
+                        <div><input type="radio" name="IsAlone" value="1" id="1" required><label for="1" class="radio"><span>Alone</span></label></div>
+                        <div><input type="radio" name="IsAlone" value="0" id="0" required><label for="0" class="radio"><span>Not Alone</span></label></div>
                     </div>
                 </div>
                 <br>

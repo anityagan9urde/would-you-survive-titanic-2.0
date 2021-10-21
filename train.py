@@ -9,6 +9,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC, LinearSVC
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
 
 #Downloading the datasets
@@ -129,6 +130,13 @@ decision.fit(X_train, Y_train)
 #Y_pred = decision.predict(X_test)
 #acc_decision = round(decision.score(X_train, Y_train)*100, 2)
 joblib.dump(decision, 'model_decision.pkl')
+
+#training on Decision Trees
+random_forest = RandomForestClassifier()
+random_forest.fit(X_train, Y_train)
+#Y_pred = decision.predict(X_test)
+#acc_decision = round(decision.score(X_train, Y_train)*100, 2)
+joblib.dump(random_forest, 'model_random_forest.pkl')
 
 #training on Gaussian Naive Bayes algorithm
 gaussian = GaussianNB()
