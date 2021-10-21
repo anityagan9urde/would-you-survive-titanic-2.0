@@ -12,7 +12,7 @@ logreg = joblib.load('models/model_logreg.pkl')
 #knn = joblib.load('models/model_knn.pkl')
 svc = joblib.load('models/model_svm.pkl')
 #decision = joblib.load('models/model_decision.pkl')
-random_forest = joblib.load('models/model_random_forest.pkl')
+#random_forest = joblib.load('models/model_random_forest.pkl')
 gaussian = joblib.load('models/model_gaussiannb.pkl')
 
 @app.route('/')
@@ -77,8 +77,8 @@ def predict():
         prediction = svc.predict(query)
     #if model=='decision':
         #prediction = decision.predict(query)
-    if model=='random_forest':
-        prediction = random_forest.predict(query)
+    #if model=='random_forest':
+        #prediction = random_forest.predict(query)
     if model=='gaussian':
         prediction = gaussian.predict(query)
     if prediction==[0]:
@@ -92,7 +92,7 @@ if __name__ == '__main__':
     #knn = joblib.load('models/model_knn.pkl')
     svc = joblib.load('models/model_svm.pkl')
     #decision = joblib.load('models/model_decision.pkl')
-    random_forest = joblib.load('models/model_random_forest.pkl')
+    #random_forest = joblib.load('models/model_random_forest.pkl')
     gaussian = joblib.load('models/model_gaussiannb.pkl')
     model_columns = joblib.load("model_columns.pkl")
     app.run(debug=True)
