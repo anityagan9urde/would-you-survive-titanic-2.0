@@ -8,6 +8,8 @@ import json
 
 app = Flask(__name__)
 
+model_columns = joblib.load("model_columns.pkl")
+
 logreg = joblib.load('models/model_logreg.pkl')
 #knn = joblib.load('models/model_knn.pkl')
 svc = joblib.load('models/model_svm.pkl')
