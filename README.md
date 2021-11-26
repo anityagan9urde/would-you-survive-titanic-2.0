@@ -30,8 +30,7 @@
 <hr>
 
 #### Following images show how the API will look when run properly:<br>
-<img src="" style="width: 650px" alt="Input Page"></img><hr size=0.1>
-<img src="" style="width: 650px" alt="Prediction"></img>
+<img src="https://github.com/AnityaGan9urde/would-you-survive-titanic-2.0/index.gif" style="width: 650px" alt="Input Page"></img>
 <hr>
 
 ### <h3 id="dataset">Dataset:</h3>
@@ -56,13 +55,23 @@
 ### <h3 id="model">Models Used:</h3>
 - The dataset shows that this is clearly a **classification** task and can be solved by a myriad of classification algorithms such as Logistic Regression, Decision Trees and even Random Forests.
 - I chose 6 algorithms to train the dataset on because why not.
-- The models which were selected were: Logistic Regression, K-Nearest Neighbours, Gaussian Naive Bayes, Decision trees, Random Forest and Multinomial NB.
+- The models which were selected were: Logistic Regression, K-Nearest Neighbours, Gaussian Naive Bayes, Decision trees, Random Forest and Support Vector Machines.
+- Model Performances:
+
+>Model |	Score
+>------|------
+>Random Forest |	86.76
+>Decision Tree |	86.76
+>KNN |	84.74
+>Logistic Regression |	80.36
+>Support Vector Machines 	|78.23
+>Naive Bayes 	|72.28
 
 ### <h3 id="api">API:</h3>
 - I made an *API for all the models* so that users can interact and use the Machine Learning models with ease. User can select which model they would like to use during prediction. 
 - To make the API work I have used the **Flask** library which are mostly used for such tasks.
 - I have also connected a **HTML** form to the flask app to take in user input and a **CSS** file to decorate it.<br>
-### <h3 id="deployment">Deployment:</h3>
+### <h3 id="deployment">Deployment:</h3><hr>
 - The Flask API was deployed on the **Heroku** cloud platform so that anyone with the link to the app can access it online.
 - I have connected this GitHub repository to Heroku so that it can be run on the Heroku dyno.
 - I have used the **Gunicorn** package which lets Python applications run on any web server. The `Procfile` and `requirements.txt` should be defined with all the details required before the deployment.<br>
