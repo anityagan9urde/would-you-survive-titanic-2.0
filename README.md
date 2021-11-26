@@ -14,6 +14,9 @@
 > Deploy the API on Heroku by clicking the button below.<br><br> 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://would-you-survive-titanic-2.herokuapp.com/)
 
+| :exclamation:  Some models are not working currently. Specifically: Random Forest, KNN and Decision Trees. The solution is being worked on.   |
+|-----------------------------------------|
+
 ### Running the project locally:
 
 ##### - Clone this repository. Open CMD. Ensure that you are in the project home directory. Create the machine learning model by running models.py as such:
@@ -30,7 +33,7 @@
 <hr>
 
 #### Following images show how the API will look when run properly:<br>
-<img src="https://github.com/AnityaGan9urde/would-you-survive-titanic-2.0/index.gif" style="width: 650px" alt="Input Page"></img>
+![]("https://github.com/AnityaGan9urde/would-you-survive-titanic-2.0/index.gif")
 <hr>
 
 ### <h3 id="dataset">Dataset:</h3>
